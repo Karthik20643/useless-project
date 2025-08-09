@@ -42,7 +42,7 @@ const InteractiveFloorPlanMap = () => {
     ? passedSelection
     : {
         department: "Computer Science",
-        teacher: teacherData["Computer Science"][1]
+        teacher: teacherData["Computer Science"][3]
       };
 
   const [currentFloor, setCurrentFloor] = useState(
