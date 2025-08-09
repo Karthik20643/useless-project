@@ -1,107 +1,68 @@
-# React
+pseudo coders 🎯
+Basic Details
+Team Name: pseudo coders
+Team Members
+Team Lead: karthik s s - CUCEK
+Member 1:  suryadev - CUCEK
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+Project Description
+A web app that helps students find their way to professors’ offices inside a 5-floor college building. Select a department, pick a teacher, and the app highlights the shortest route on an interactive floor map. Each department is color-coded for quick recognition.
 
-## 🚀 Features
+The Problem (that doesn't exist)
+[What ridiculous problem are you solving?]
 
-- **React 18** - React version with improved rendering and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **Redux Toolkit** - State management with simplified Redux setup
-- **TailwindCSS** - Utility-first CSS framework with extensive customization
-- **React Router v6** - Declarative routing for React applications
-- **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
-- **Form Management** - React Hook Form for efficient form handling
-- **Animation** - Framer Motion for smooth UI animations
-- **Testing** - Jest and React Testing Library setup
+The Solution (that nobody asked for)
+THE STUDENTS CAN REACH THEIR CORRECT DESTNIATION WITHOUT CONFUSION.
 
-## 📋 Prerequisites
+Technical Details : 
+Technologies/Components Used
+For Software:
 
-- Node.js (v14.x or higher)
-- npm or yarn
+Languages: JavaScript, HTML, CSS
 
-## 🛠️ Installation
+Frameworks: React.js
 
-1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-   
-2. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+Libraries: React Router, TailwindCSS (for styling)
 
-## 📁 Project Structure
-
-```
-react_app/
-├── public/             # Static assets
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page components
-│   ├── styles/         # Global styles and Tailwind configuration
-│   ├── App.jsx         # Main application component
-│   ├── Routes.jsx      # Application routes
-│   └── index.jsx       # Application entry point
-├── .env                # Environment variables
-├── index.html          # HTML template
-├── package.json        # Project dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-└── vite.config.js      # Vite configuration
-```
-
-## 🧩 Adding Routes
-
-To add new routes to the application, update the `Routes.jsx` file:
-
-```jsx
-import { useRoutes } from "react-router-dom";
-import HomePage from "pages/HomePage";
-import AboutPage from "pages/AboutPage";
-
-const ProjectRoutes = () => {
-  let element = useRoutes([
-    { path: "/", element: <HomePage /> },
-    { path: "/about", element: <AboutPage /> },
-    // Add more routes as needed
-  ]);
-
-  return element;
-};
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. The configuration includes:
-
-- Forms plugin for form styling
-- Typography plugin for text styling
-- Aspect ratio plugin for responsive elements
-- Container queries for component-specific responsive design
-- Fluid typography for responsive text
-- Animation utilities
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints.
+Tools: Git, GitHub, VS Code
 
 
-## 📦 Deployment
 
-Build the application for production:
+Installation
+# Clone the repo
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
 
-```bash
-npm run build
-```
+# Install dependencies
+npm install
 
-## 🙏 Acknowledgments
 
-- Built with [Rocket.new](https://rocket.new)
-- Powered by React and Vite
-- Styled with Tailwind CSS
+Run
+npm start
 
-Built with ❤️ on Rocket.new
+Project Documentation
+Screenshots (Add at least 3)
+For Software: <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b36ccf3a-6787-4fac-9032-6c983fcf1b81" />
+Dropdowns for selecting department and teacher.
+<img width="1919" height="1074" alt="image" src="https://github.com/user-attachments/assets/ac43c257-6ffc-4fcb-989f-0b1937698aac" />
+Floor plan with department color coding.
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a35a34f8-1cac-427a-b4fd-fa5f5bb1f9ae" />
+Yellow-highlighted navigation path to the selected teacher’s office.
+
+
+
+Diagrams
+<img width="313" height="778" alt="image" src="https://github.com/user-attachments/assets/9c92341e-6270-402c-aefe-47f20b0e3df5" />
+Data flow: User selects department & teacher → Floor map loads → Path animation highlights route.
+
+
+
+Project Demo
+Video
+[Add your demo video link here] Explain what the video demonstrates
+
+
+
+Team Contributions
+Team Lead: karthik s s - CUCEK
+Member 1:  suryadev - CUCEK
