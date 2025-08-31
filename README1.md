@@ -65,7 +65,7 @@ project-root/
 └── middleware/
     └── upload.js
 ```
-
+Database Schema (NeonDB / PostgreSQL)
 ```
 CREATE TABLE photos (
   id SERIAL PRIMARY KEY,
@@ -75,8 +75,9 @@ CREATE TABLE photos (
   created_at TIMESTAMP DEFAULT NOW()
 );
 ```
-```
 Environment Variables (.env)
+```
+
 PORT=5000
 
 # NeonDB
@@ -92,7 +93,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 ```
 
 API Endpoints
-1️⃣ Upload Photo (Create)
+(1) Upload Photo (Create)
 
 Endpoint:
 
@@ -109,9 +110,9 @@ Workflow:
 
 Check how many images uploaded to Imgur in the last hour
 
-If < 50 → upload to Imgur
+If < 50 -> upload to Imgur
 
-Else → upload to Cloudinary
+Else -> upload to Cloudinary
 
 Save link + provider in DB
 
@@ -155,7 +156,7 @@ response (JSON) :
 [
   {
     "id": 1,
-    "title": "My Best Shot",
+    "title": "My 49th click",
     "file_url": "https://i.imgur.com/abc123.jpg",
     "storage_provider": "imgur",
     "created_at": "2025-08-29T12:34:56.789Z"
@@ -171,8 +172,10 @@ response (JSON) :
 
 ```
 Update Photo(update)
-Endpoint:   PUT /photos/:id
-
+Endpoint: 
+```
+PUT /photos/:id
+```
 Request JSON:
 ```
 {
@@ -201,7 +204,10 @@ response JSON :
 ```
 Imgur Upload Details [imgur source](https://apidocs.imgur.com/)
 
-Endpoint: POST https://api.imgur.com/3/image
+Endpoint:
+```
+POST https://api.imgur.com/3/image
+```
 
 Auth: Client-ID <IMGUR_CLIENT_ID> in header
 
@@ -233,8 +239,8 @@ Response JSON model:
 
 ```
  Request to  Response Flow : 
-
-`** Frontend sends photo file → POST /photos
+**
+ Frontend sends photo file → POST /photos
 
 Multer handles file storage temporarily
 
@@ -246,7 +252,8 @@ Else → upload to Cloudinary API
 
 Store resulting file_url + provider in NeonDB
 
-Return saved photo JSON to frontend **`
+Return saved photo JSON to frontend 
+**
 
 
 Run Locally : 
