@@ -4,12 +4,12 @@ This backend service enables uploading, storing, and managing photos for the CUC
 It uses a multi-cloud strategy:
 
 Primary storage: Imgur
- (free, fast, simple)
+ 
 
-Fallback storage: Cloudinary
- (powerful transformations & unlimited quota)
+Fallback/secondary storage: Cloudinary
+ 
 
-If Imgur quota (50 uploads/hour) is exceeded, the system automatically switches to Cloudinary.
+If Imgur limit (50 uploads/hour) is exceeded, the system automatically switches to Cloudinary.
 
 The uploaded photo links are stored in NeonDB (Postgres) and managed via CRUD operations.
 
@@ -42,6 +42,7 @@ Imgur API – Primary image hosting
 Cloudinary API – Secondary image hosting
 
 NeonDB (PostgreSQL) – Persistent database
+```
 project-root/
 │── server.js
 │── package.json
@@ -63,6 +64,7 @@ project-root/
 │
 └── middleware/
     └── upload.js
+```
 
 ```
 CREATE TABLE photos (
